@@ -1,0 +1,7 @@
+require('configs.options')
+require('configs.keymaps')
+require('configs.plugins')
+require('configs.colorscheme')
+require('configs.nvim-tree')
+require('configs.lspconfig')
+require('configs.lualine')
