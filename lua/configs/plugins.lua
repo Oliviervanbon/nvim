@@ -50,6 +50,30 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
   use 'lukas-reineke/indent-blankline.nvim'
+  use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.4',
+      requires = {
+          'nvim-lua/plenary.nvim',
+      },
+  }
+  use 'tpope/vim-fugitive'
+  use "sindrets/diffview.nvim"
+  use {
+      "aaronhallaert/advanced-git-search.nvim",
+      config = function()
+          require("telescope").load_extension("advanced_git_search")
+      end,
+      requires = {
+         "nvim-telescope/telescope.nvim",
+         -- to show diff splits and open commits in browser
+         "tpope/vim-fugitive",
+         -- to open commits in browser with fugitive
+         "tpope/vim-rhubarb",
+         -- optional: to replace the diff from fugitive with diffview.nvim
+         -- (fugitive is still needed to open in browser)
+         -- "sindrets/diffview.nvim",
+     },
+  }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
