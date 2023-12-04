@@ -90,6 +90,11 @@ _G.packer_plugins = {
     path = "/home/olivier/.local/share/nvim/site/pack/packer/start/diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/olivier/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/olivier/.local/share/nvim/site/pack/packer/start/impatient.nvim",

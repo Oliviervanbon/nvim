@@ -34,7 +34,7 @@ packer.init({
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
-  use "nvim-lua/plenary.nvim" -- used by telescope, gitsigns, vgit, neogit, neo-tree.
+  use 'nvim-lua/plenary.nvim' -- used by telescope, gitsigns, vgit, neogit, neo-tree.
   use 'lewis6991/impatient.nvim'
   use 'rebelot/kanagawa.nvim'
   use 'EdenEast/nightfox.nvim'
@@ -57,21 +57,22 @@ return packer.startup(function(use)
       },
   }
   use 'tpope/vim-fugitive'
-  use "sindrets/diffview.nvim"
+  use 'sindrets/diffview.nvim'
+  use 'lewis6991/gitsigns.nvim'
   use {
-      "aaronhallaert/advanced-git-search.nvim",
+      'aaronhallaert/advanced-git-search.nvim',
       config = function()
-          require("telescope").load_extension("advanced_git_search")
+          require('telescope').load_extension('advanced_git_search')
       end,
       requires = {
-         "nvim-telescope/telescope.nvim",
+         'nvim-telescope/telescope.nvim',
          -- to show diff splits and open commits in browser
-         "tpope/vim-fugitive",
+         'tpope/vim-fugitive',
          -- to open commits in browser with fugitive
-         "tpope/vim-rhubarb",
+         'tpope/vim-rhubarb',
          -- optional: to replace the diff from fugitive with diffview.nvim
          -- (fugitive is still needed to open in browser)
-         -- "sindrets/diffview.nvim",
+         'sindrets/diffview.nvim',
      },
   }
   -- Automatically set up your configuration after cloning packer.nvim
