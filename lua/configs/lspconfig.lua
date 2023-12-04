@@ -4,6 +4,7 @@ if not ok then
 end
 
 lspconfig.pylsp.setup{
+    autostart = false;
     settings = {
         pylsp = {
             plugins = {
