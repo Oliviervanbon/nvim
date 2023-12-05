@@ -6,6 +6,10 @@ function keymap(mode, lhs, rhs, opts)
     vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+vim.g.mapleader = "<"
+
+keymap('n', '<leader>ff', ':Telescope find_files<CR>', opts)
+keymap('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 
 -- select all with Ctrl + a
 keymap("", "<C-a>", "gg<S-v>G", opts)

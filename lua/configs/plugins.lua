@@ -51,7 +51,7 @@ return packer.startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'lukas-reineke/indent-blankline.nvim'
   use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.4',
+      'nvim-telescope/telescope.nvim', tag = '0.1.5',
       requires = {
           'nvim-lua/plenary.nvim',
       },
