@@ -7,6 +7,13 @@ return {
     "MunifTanjim/nui.nvim",
   },
   opts = {
-   vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
+    filesystem = {
+      filtered_items = {
+        visible = true,
+        hide_dotfiles = true,
+        hide_gitignored = true,
+      }
+    },
+    vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
   }
 }
