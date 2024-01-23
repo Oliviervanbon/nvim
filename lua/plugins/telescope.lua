@@ -17,7 +17,7 @@ return {
           -- Show builtin git pickers when executing "show_custom_functions" or :AdvancedGitSearch
           show_builtin_git_pickers = false,
           entry_default_author_or_date = "author", -- one of "author" or "date"
-      
+
           -- Telescope layout setup
           telescope_theme = {
             function_name_1 = {

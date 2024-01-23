@@ -20,6 +20,8 @@ local options = {
 	clipboard = "unnamedplus",
 	termguicolors = true,
 	colorcolumn = "120",
+  foldmethod = "syntax",
+  foldexpr = "nvim_treesitter#foldexpr()",
 }
 
 for k, v in pairs(options) do

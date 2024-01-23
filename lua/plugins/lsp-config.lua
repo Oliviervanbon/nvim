@@ -31,7 +31,7 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
-      ensure_installed = { "stylua", "ruff" }, -- "isort"
+      ensure_installed = { "stylua", "ruff", "jq" }, -- "isort"
     },
   },
   {
@@ -45,6 +45,7 @@ return {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.diagnostics.ruff,
           null_ls.builtins.formatting.ruff,
+          null_ls.builtins.formatting.jq,
           -- Check if ruff also does import sorting, otherwise include:
           -- null_ls.builtins.formatting.isort,
         },
