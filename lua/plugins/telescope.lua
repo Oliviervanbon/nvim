@@ -1,8 +1,8 @@
 return {
   {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.5',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.5",
+    dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       extensions = {
         advanced_git_search = {
@@ -21,35 +21,34 @@ return {
           -- Telescope layout setup
           telescope_theme = {
             function_name_1 = {
-                -- Theme options
+              -- Theme options
             },
             function_name_2 = "dropdown",
             -- e.g. realistic example
             show_custom_functions = {
-                layout_config = { width = 0.4, height = 0.4 },
-            }
-          }
-        }
-      }
+              layout_config = { width = 0.4, height = 0.4 },
+            },
+          },
+        },
+      },
     },
     keys = {
-      { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find files"},
-      { '<leader>fg', "<cmd>Telescope live_grep<CR>", desc = "Live grep"}
-    }
+      { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find files" },
+      { "<leader>fg", "<cmd>Telescope live_grep<CR>",  desc = "Live grep" },
+    },
   },
   {
     "aaronhallaert/advanced-git-search.nvim",
     dependencies = {
-      'tpope/vim-fugitive',
+      "tpope/vim-fugitive",
       -- to open commits in browser with fugitive
-      'tpope/vim-rhubarb',
+      "tpope/vim-rhubarb",
       -- optional: to replace the diff from fugitive with diffview.nvim
       -- (fugitive is still needed to open in browser)
-      'sindrets/diffview.nvim',
+      "sindrets/diffview.nvim",
     },
-    opts={},
-    config = function ()
-    end
+    opts = {},
+    config = function() end,
   },
   {
     "nvim-telescope/telescope-ui-select.nvim",
@@ -58,12 +57,11 @@ return {
       require("telescope").setup({
         extensions = {
           ["ui-select"] = {
-            require("telescope.themes").get_dropdown{
-            }
-          }
-        }
+            require("telescope.themes").get_dropdown({}),
+          },
+        },
       })
       require("telescope").load_extension("ui-select")
-    end
-  }
+    end,
+  },
 }
