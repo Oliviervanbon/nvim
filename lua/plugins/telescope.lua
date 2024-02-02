@@ -32,11 +32,10 @@ return {
         }
       }
     },
-    config = function()
-      local builtin = require("telescope.builtin")
-      vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-      vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-    end
+    keys = {
+      { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find files"},
+      { '<leader>fg', "<cmd>Telescope live_grep<CR>", desc = "Live grep"}
+    }
   },
   {
     "aaronhallaert/advanced-git-search.nvim",
@@ -48,7 +47,8 @@ return {
       -- (fugitive is still needed to open in browser)
       'sindrets/diffview.nvim',
     },
-    config = function()
+    opts={},
+    config = function ()
     end
   },
   {

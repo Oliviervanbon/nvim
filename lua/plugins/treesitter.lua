@@ -6,6 +6,4 @@ return {
     highlight = { enable = true },
     indent = { enable = true }
   },
-  config = function()
-  end
 }

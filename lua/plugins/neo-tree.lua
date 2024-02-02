@@ -14,6 +14,8 @@ return {
         hide_gitignored = true,
       }
     },
-    vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
+  },
+  keys = {
+    {"<C-n>", ":Neotree filesystem reveal left<CR>", desc="Open Neotree on the left"}
   }
 }

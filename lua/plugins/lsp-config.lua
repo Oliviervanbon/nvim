@@ -13,20 +13,22 @@ return {
     "neovim/nvim-lspconfig",
     opts = {},
     config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
       })
       -- lspconfig.jedi_language_server.setup({})
       lspconfig.ruff_lsp.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
       })
-      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
     end,
+    keys = {
+      { "K",          vim.lsp.buf.hover,       desc = "hover/definition" },
+      { "<leader>gd", vim.lsp.buf.definition,  desc = "Go to definition" },
+      { "<leader>ca", vim.lsp.buf.code_action, desc = "Code action" },
+    },
   },
   {
     "jay-babu/mason-null-ls.nvim",
@@ -37,6 +39,9 @@ return {
   {
     "nvimtools/none-ls.nvim",
     opts = {},
+    keys = {
+      { "<leader>fc", vim.lsp.buf.format, desc = "Format code" },
+    },
     config = function()
       local null_ls = require("null-ls")
 
@@ -50,8 +55,6 @@ return {
           -- null_ls.builtins.formatting.isort,
         },
       })
-
-      vim.keymap.set("n", "<leader>fc", vim.lsp.buf.format, {})
     end,
   },
 }
