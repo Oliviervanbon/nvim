@@ -6,4 +6,5 @@ Personal neovim configuration files
 - "goolord/alpha-nvim",
 
 ## autopairs.lua
+asfas *sdfgsdfg*
 
