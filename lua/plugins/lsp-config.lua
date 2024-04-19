@@ -6,7 +6,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "lua_ls", "ruff_lsp" }, -- "jedi_language_server"
+      ensure_installed = { "lua_ls", "ruff_lsp", "ruff"}, -- "jedi_language_server"
     },
   },
   {
@@ -56,5 +56,9 @@ return {
         },
       })
     end,
+    dependencies = {
+      "nvimtools/none-ls-extras.nvim",
+      "nvim-lua/plenary.nvim"
+    }
   },
 }

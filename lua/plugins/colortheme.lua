@@ -1,22 +1,25 @@
 return {
   {
     "catppuccin/nvim",
-    -- lazy = false,
+    lazy = false,
+    priority=1000,
     name = "catppuccin",
-    priority = 1000,
-    opts = {},
-    config = function()
-      vim.cmd.colorscheme("catppuccin-macchiato")
-    end,
+    opts = {
+      flavour="macchiato",
+      integrations = {
+        barbar = false,
+        neotree = true,
+        markdown = true,
+        mason = true,
+        gitsigns = true
+      },
+    },
   },
   {
     "shaunsingh/nord.nvim",
-    lazy = false,
+    lazy = true,
     name = "nord",
     priority = 1000,
     opts = {},
-    config = function()
-      -- vim.cmd.colorscheme("nord")
-    end,
-  },
+  }
 }

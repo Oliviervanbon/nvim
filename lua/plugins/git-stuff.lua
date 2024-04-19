@@ -52,6 +52,13 @@ return {
   {
     "tpope/vim-fugitive",
     opts = {},
-    config = function() end,
+    config = function()
+    end
   },
+  {
+    "rhysd/git-messenger.vim",
+    opts = {},
+    config = function ()
+    end
+  }
 }
