@@ -12,7 +12,7 @@ return {
         untracked = { text = "┆" },
       },
       signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
-      numhl = false,  -- Toggle with `:Gitsigns toggle_numhl`
+      numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
       linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
       word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
       watch_gitdir = {
@@ -45,20 +45,22 @@ return {
       },
     },
     keys = {
-      { "<leader>gp", "<cmd>Gitsigns preview_hunk<CR>",              desc = "Preview git hunk" },
-      { "<leader>gt", "<cmd>Gitsigns toggle_current_line_blame<CR>", desc = "View current line blame" },
+      { "<leader>hp", "<cmd>Gitsigns preview_hunk<CR>", desc = "Preview git hunk" },
+      { "<leader>hr", "<cmd>Gitsigns reset_hunk<CR>", desc = "Reset git hunk" },
+      { "<leader>hs", "<cmd>Gitsigns stage_hunk<CR>", desc = "Stage git hunk" },
+      { "<leader>hu", "<cmd>Gitsigns undo_stage_hunk<CR>", desc = "Undo stage git hunk" },
+      { "<leader>hB", "<cmd>Gitsigns toggle_current_line_blame<CR>", desc = "View current line blame" },
+      { "<leader>hD", "<cmd>Gitsigns diffthis<CR>", desc = "Diff this" },
     },
   },
   {
     "tpope/vim-fugitive",
     opts = {},
-    config = function()
-    end
+    config = function() end,
   },
   {
     "rhysd/git-messenger.vim",
     opts = {},
-    config = function ()
-    end
-  }
+    config = function() end,
+  },
 }

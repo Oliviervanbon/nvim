@@ -1,3 +1,7 @@
+-- Global variables.
+vim.g.development_dir = vim.env.HOME .. "/Development"
+vim.g.personal_projects_dir = vim.g.development_dir .. "/Personal"
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
