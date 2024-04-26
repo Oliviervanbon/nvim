@@ -42,7 +42,7 @@ return {
           documentation = cmp.config.window.bordered(),
         },
         completion = {
-          completeopt = "menu,menuone,preview,noselect",
+          completeopt = "menu,menuone,popup,noselect,noinsert",
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
