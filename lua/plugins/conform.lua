@@ -15,7 +15,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "biome", "lua_ls", "html", "ruff_lsp", "ruff" },
+      ensure_installed = { "biome", "lua_ls", "html", "ruff_lsp", "ruff", "nil_ls" },
       automatic_installation = true,
     },
     config = true,
@@ -23,7 +23,7 @@ return {
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     opts = {
-      ensure_installed = { "stylua", "prettier" }
+      ensure_installed = { "stylua", "prettier", "nixpkgs-fmt" }
     },
     config = true,
   },
