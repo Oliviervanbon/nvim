@@ -6,9 +6,9 @@ return {
         icons = {
           package_installed = "✓",
           package_pending = "➜",
-          package_uninstalled = "✗"
-        }
-      }
+          package_uninstalled = "✗",
+        },
+      },
     },
     config = true,
   },
@@ -23,7 +23,7 @@ return {
   {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     opts = {
-      ensure_installed = { "stylua", "prettier", "nixpkgs-fmt" }
+      ensure_installed = { "stylua", "prettier", "nixpkgs-fmt" },
     },
     config = true,
   },
@@ -33,7 +33,7 @@ return {
     config = function()
       local lint = require("lint")
       lint.linters_by_ft = {
-        markdown = {  },
+        markdown = {},
       }
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
@@ -50,7 +50,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    event = {"BufReadPre", "BufNewFile" },
+    event = { "BufReadPre", "BufNewFile" },
     opts = {},
     config = function()
       local lspconfig = require("lspconfig")
@@ -90,7 +90,7 @@ return {
                 indent_size = "2",
                 align_continuous_assign_statement = false,
                 align_continuous_rect_table_field = false,
-                align_array_table = false
+                align_array_table = false,
               },
             },
             -- make the language server recognize "vim" global
@@ -114,8 +114,18 @@ return {
           settings = {
             -- Any extra CLI arguments for 'ruff' go here.
             args = {},
-          }
-        }
+          },
+        },
+      })
+      lspconfig.nil_ls.setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+        init_options = {
+          settings = {
+            -- Any extra CLI arguments for 'ruff' go here.
+            args = {},
+          },
+        },
       })
       -- lspconfig.markdown_oxide.setup({
       --   capabilities = capabilities,
@@ -129,12 +139,12 @@ return {
       -- })
     end,
     keys = {
-      { "K",          vim.lsp.buf.hover,       desc = "Show documentation for what is under cursor" },
-      { "gR", "<cmd>Telescope lsp_references<CR>", desc = "Show LSP references"},
-      { "gd", "<cmd>Telescope lsp_definitions<CR>", desc = "Show LSP definitions"},
-      { "gD", vim.lsp.buf.definition,  desc = "Go to declaration" },
-      { "gi", "<cmd>Telescope lsp_implementations<CR>", desc = "Show LSP implementations"},
-      { "gt", "<cmd>Telescope lsp_type_definitions<CR>", desc = "Show LSP type definitions"},
+      { "K", vim.lsp.buf.hover, desc = "Show documentation for what is under cursor" },
+      { "gR", "<cmd>Telescope lsp_references<CR>", desc = "Show LSP references" },
+      { "gd", "<cmd>Telescope lsp_definitions<CR>", desc = "Show LSP definitions" },
+      { "gD", vim.lsp.buf.definition, desc = "Go to declaration" },
+      { "gi", "<cmd>Telescope lsp_implementations<CR>", desc = "Show LSP implementations" },
+      { "gt", "<cmd>Telescope lsp_type_definitions<CR>", desc = "Show LSP type definitions" },
       { "<leader>ca", vim.lsp.buf.code_action, desc = "Code action" },
     },
   },
@@ -167,6 +177,7 @@ return {
         html = { "prettier" },
         json = { "prettier" },
         markdown = { { "prettierd", "prettier" } },
+        nix = { "nixfmt" },
         -- Use the "*" filetype to run formatters on all filetypes.
       },
       -- Set up format-on-save
