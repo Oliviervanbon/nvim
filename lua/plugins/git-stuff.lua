@@ -40,9 +40,6 @@ return {
         row = 0,
         col = 1,
       },
-      yadm = {
-        enable = false,
-      },
     },
     keys = {
       { "<leader>hp", "<cmd>Gitsigns preview_hunk<CR>", desc = "Preview git hunk" },
