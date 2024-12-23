@@ -20,6 +20,28 @@ return {
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
       lspconfig.lua_ls.setup({ capabilities = capabilities })
+      lspconfig.nixd.setup({
+        capabilities = capabilities,
+        cmd = { "nixd" },
+        settings = {
+          nixd = {
+            nixpkgs = {
+              expr = "import <nixpkgs> { }",
+            },
+            formatting = {
+              command = { "nixfmt" },
+            },
+            options = {
+              nixos = {
+                expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.k-on.options',
+              },
+              home_manager = {
+                expr = '(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations."ruixi@k-on".options',
+              },
+            },
+          },
+        },
+      })
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
