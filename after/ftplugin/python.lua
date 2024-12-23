@@ -1,2 +1,4 @@
-vim.opt.colorcolumn = 120
-vim.opt.shiftwidth = 4
+local set = vim.opt_local
+
+set.colorcolumn = "120"
+set.shiftwidth = 4
