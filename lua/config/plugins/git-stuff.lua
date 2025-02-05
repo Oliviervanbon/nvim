@@ -46,6 +46,7 @@ return {
       { "<leader>hr", "<cmd>Gitsigns reset_hunk<CR>",                desc = "Reset git hunk" },
       { "<leader>hs", "<cmd>Gitsigns stage_hunk<CR>",                desc = "Stage git hunk" },
       { "<leader>hu", "<cmd>Gitsigns undo_stage_hunk<CR>",           desc = "Undo stage git hunk" },
+      { "<leader>bs", "<cmd>Gitsigns stage_buffer<CR>",              desc = "Stage git buffer" },
       { "<leader>hB", "<cmd>Gitsigns toggle_current_line_blame<CR>", desc = "View current line blame" },
       { "<leader>hD", "<cmd>Gitsigns diffthis<CR>",                  desc = "Diff this" },
     },
