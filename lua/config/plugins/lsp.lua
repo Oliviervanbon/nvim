@@ -42,6 +42,9 @@ return {
           },
         },
       })
+      lspconfig.ruff.setup({
+        capabilities = capabilities
+      })
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
