@@ -16,12 +16,11 @@ return {
       },
     },
     config = function()
-      local lspconfig = require("lspconfig")
+      -- local lspconfig = require("lspconfig")
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-      lspconfig.lua_ls.setup({ capabilities = capabilities })
-      lspconfig.nixd.setup({
-        capabilities = capabilities,
+      vim.lsp.enable("lua_ls")
+      vim.lsp.enable("nixd", {
         cmd = { "nixd" },
         settings = {
           nixd = {
@@ -42,12 +41,8 @@ return {
           },
         },
       })
-      lspconfig.ruff.setup({
-        capabilities = capabilities
-      })
-      lspconfig.biome.setup({
-        capabilities = capabilities
-      })
+      vim.lsp.enable("ruff")
+      vim.lsp.enable("biome")
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
