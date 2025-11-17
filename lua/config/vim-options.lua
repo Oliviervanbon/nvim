@@ -10,4 +10,4 @@ vim.opt.smarttab = true
 vim.opt.splitright = true
 vim.opt.shiftwidth = 4
 vim.opt.termguicolors = true
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamed"
