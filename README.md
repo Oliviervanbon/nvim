@@ -38,3 +38,16 @@ Personal neovim configuration files
 
 - treesitter:
     highlight specific stuff in different languages
+
+# Look into
+
+- MariaSolOs's config
+https://github.com/MariaSolOs/dotfiles/tree/main/.config/nvim
+
+- Copilot
+    - https://nithinbekal.com/posts/copilot-neovim/
+    - https://www.reddit.com/r/neovim/comments/1cuzrlw/how_do_you_use_your_copilot/
+    - https://github.com/copilotlsp-nvim/copilot-lsp
+    - https://github.com/zbirenbaum/copilot.lua
+    - https://github.com/zbirenbaum/copilot-cmp
+
