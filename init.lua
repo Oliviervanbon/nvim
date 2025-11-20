@@ -23,7 +23,17 @@ vim.keymap.set("n", "<leader>_", "<C-w>s")          -- split window horizontally
 vim.keymap.set("n", "<leader>se", "<C-w>=")         -- make split windows equal width & height
 vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>") -- close current split window
 
+-- " " Copy to clipboard
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>Y", '"+yg_')
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>yy", '"+yy')
 
+-- -- " " Paste from clipboard
+vim.keymap.set("n", "<leader>p", '"+p')
+vim.keymap.set("n", "<leader>P", '"+P')
+vim.keymap.set("v", "<leader>p", '"+p')
+vim.keymap.set("v", "<leader>P", '"+P')
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking (copying) text",
